@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abel's World | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <div id="scroll-top">
+        <i class="fa-solid fa-rocket"></i>
+    </div>
+
+    <header>
+        <a href="#" class="logo">Abel<span>!</span></a>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#skills">Stats</a>
+            <a href="#projects">Work</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <a href="#contact" class="chat-btn">Let's Talk</a>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-text">
+            <p class="greeting">HI THERE! I'M</p>
+            <h1>Abel Thomas <span>Jacob</span></h1>
+            <h3>I build <span class="typed-element"></span></h3>
+            <p class="bio">AIML student at Sree Buddha College. I'm all about <b>Kaizen</b>—getting 1% better every single day while building cool things for the web.</p>
+            
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="#projects" class="main-btn">Check my Work!</a>
+        </div>
+        <div class="home-img">
+            <div class="blob">
+                <img src="portfolio.jpg.jpg" alt="Abel">
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2 class="title">My <span>Stats</span></h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <div class="circle" style="--clr:#00ffff; --p:95;">
+                    <div class="inner">95%</div>
+                </div>
+                <h4>HTML & CSS</h4>
+            </div>
+            <div class="skill-item">
+                <div class="circle" style="--clr:#00ffff; --p:75;">
+                    <div class="inner">75%</div>
+                </div>
+                <h4>JavaScript</h4>
+            </div>
+            <div class="skill-item">
+                <div class="circle" style="--clr:#00ffff; --p:88;">
+                    <div class="inner">88%</div>
+                </div>
+                <h4>AIML Logic</h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="title">Cool <span>Stuff</span></h2>
+        <div class="project-list">
+            <div class="p-card">
+                <div class="p-icon">🚀</div>
+                <h3>Kaizen Portfolio</h3>
+                <p>My own slice of the internet. Fast, flashy, and constantly evolving.</p>
+            </div>
+            <div class="p-card">
+                <div class="p-icon">🤖</div>
+                <h3>AI Lab Projects</h3>
+                <p>Messing around with data and neural networks at college.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="title">Say <span>Hi!</span></h2>
+        <form class="contact-box">
+            <input type="text" placeholder="Your Name" required>
+            <textarea placeholder="What's on your mind?" rows="4"></textarea>
+            <button type="submit" class="main-btn">Send Message</button>
+        </form>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script>
+        new Typed(".typed-element", {
+            strings: ["AI Models.", "Websites.", "Cool Apps.", "Neural Nets."],
+            typeSpeed: 60, backSpeed: 40, loop: true
+        });
+
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 70 },
+                color: { value: "#00ffff" },
+                opacity: { value: 0.3 },
+                size: { value: 2 },
+                line_linked: { enable: true, color: "#00ffff", opacity: 0.1 },
+                move: { speed: 1.5 }
+            }
+        });
+
+        const sTop = document.getElementById("scroll-top");
+        window.onscroll = () => {
+            if (window.scrollY > 300) sTop.style.display = "grid";
+            else sTop.style.display = "none";
+        };
+        sTop.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+    </script>
+</body>
+</html>
